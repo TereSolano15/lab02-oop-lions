@@ -8,6 +8,8 @@
 
 #include <string>
 #include <ostream>
+#include <iostream>
+#include <sstream>
 using namespace std;
 
 /**
@@ -20,10 +22,17 @@ private:
   int documentld;
 
 public:
-  Person(){
-    
-  }
-
+  Person();
+  Person(string firstName, string lastName, int documentld);
+  ~Person();
+  void setFirstName(string firstName);
+  string getFisrtNme();
+  void setLastName(string lastName);
+  string getLastName();
+  void setDocumentld(int documentld);
+  int getDocumentld();
+  virtual double salary() = 0;
+  virtual string toString();
 };
 
 

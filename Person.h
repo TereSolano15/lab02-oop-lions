@@ -8,11 +8,21 @@
 
 #include <string>
 #include <ostream>
+using namespace std;
 
 /**
  * Abstract Class of Person
  */
 class Person {
+private:
+  string firstName;
+  string lastName;
+  int documentld;
+
+public:
+  Person(){
+    
+  }
 
 };
 

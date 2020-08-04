@@ -8,6 +8,22 @@
 
 class Professor: public Person {
 
+  public:
+
+  double monthlySalary;
+  double commissionRate;
+
+  private:
+
+  Professor();
+  Professor(double, double);
+  virtual ~Professor();
+  getMonthlySalary();
+  setMonthlySalary(double);
+  getCommissionRate();
+  setCommissionRate(double);
+
+
 };
 
 #endif //LAB02_OOP_PROFESSOR_H

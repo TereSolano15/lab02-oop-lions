@@ -57,7 +57,10 @@ void Professor::setCommissionRate(double commissionRate){
 //methods
 
 double Professor::salary(){
-return 0.0;
+  double sum;
+  double aux = (monthlySalary*commissionRate)/100;
+  sum = monthlySalary + aux;
+return sum; 
 }
 
 string Professor::toString(){

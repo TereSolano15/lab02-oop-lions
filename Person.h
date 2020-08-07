@@ -17,14 +17,14 @@ using namespace std;
  */
 class Person {
 private:
-  string firstName;
-  string lastName;
-  int documentld;
+    string firstName;
+    string lastName;
+    int documentld;
 
 public:
-    Person();
-
     Person(const string &firstName, const string &lastName, int documentld);
+    Person();
+    virtual ~Person();
 
     const string &getFirstName() const;
 
@@ -39,7 +39,7 @@ public:
     void setDocumentld(int documentld);
 
     virtual double salary() = 0;
-  virtual string toString();
+    virtual string toString();
 };
 
 

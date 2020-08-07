@@ -14,6 +14,10 @@ Person::Person(const string &firstName, const string &lastName, int documentld) 
                                                                                   lastName(lastName),
                                                                                   documentld(documentld) {}
 
+Person::~Person() {
+
+}
+
 const string &Person::getFirstName() const {
     return firstName;
 }
@@ -37,3 +41,14 @@ int Person::getDocumentld() const {
 void Person::setDocumentld(int documentld) {
     Person::documentld = documentld;
 }
+
+string Person::toString() {
+    stringstream s;
+    s << "The first name is: " << this->firstName;
+    s << "The last name is: " << this->lastName;
+    s << "The document is: " << this->documentld;
+    return s.str();
+}
+
+
+

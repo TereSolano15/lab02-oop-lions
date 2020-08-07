@@ -5,47 +5,35 @@
 
 #include "Person.h"
 
-Person::Person(){
- this->firstName="Sin definir";
- this->lastName="Sin definir";
- this->documentld=0;
+
+Person::Person() {
+
 }
 
-Person::Person(string firstName, string lastName, int documentld){
-  this->firstName=firstName;
-  this->lastName=lastName;
-  this->documentld=documentld;
+Person::Person(const string &firstName, const string &lastName, int documentld) : firstName(firstName),
+                                                                                  lastName(lastName),
+                                                                                  documentld(documentld) {}
+
+const string &Person::getFirstName() const {
+    return firstName;
 }
 
-Person::~Person(){}
-
-void Person::setFirstName(string firstName){
-  this->firstName = firstName;
+void Person::setFirstName(const string &firstName) {
+    Person::firstName = firstName;
 }
 
-string Person::getFisrtNme(){
-  return this->firstName;
+const string &Person::getLastName() const {
+    return lastName;
 }
 
-void Person::setLastName(string lastName){
-  this->lastName = lastName;
+void Person::setLastName(const string &lastName) {
+    Person::lastName = lastName;
 }
 
-string Person::getLastName(){
-  return this->lastName;
+int Person::getDocumentld() const {
+    return documentld;
 }
 
-void Person::setDocumentld(int documentld){
-  this->documentld = documentld;
-}
-
-int Person::getDocumentld(){
-  return this->documentld;
-}
-
-string Person::toString(){
-  stringstream s;
-  s << "The first name is: " << this->firstName;
-  s << "The last name is: " << this->lastName;
-  s << "The document is: " << this->documentld;
+void Person::setDocumentld(int documentld) {
+    Person::documentld = documentld;
 }

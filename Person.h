@@ -22,16 +22,23 @@ private:
   int documentld;
 
 public:
-  Person();
-  Person(string firstName, string lastName, int documentld);
-  ~Person();
-  void setFirstName(string firstName);
-  string getFisrtNme();
-  void setLastName(string lastName);
-  string getLastName();
-  void setDocumentld(int documentld);
-  int getDocumentld();
-  virtual double salary() = 0;
+    Person();
+
+    Person(const string &firstName, const string &lastName, int documentld);
+
+    const string &getFirstName() const;
+
+    void setFirstName(const string &firstName);
+
+    const string &getLastName() const;
+
+    void setLastName(const string &lastName);
+
+    int getDocumentld() const;
+
+    void setDocumentld(int documentld);
+
+    virtual double salary() = 0;
   virtual string toString();
 };
 

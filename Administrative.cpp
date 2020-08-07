@@ -5,22 +5,21 @@
 #include <iomanip>
 #include "Administrative.h"
 
-Administrative::Administrative(){
-monthlySalary = 0.0;
-}
-Administrative::Administrative(double _monthlySalary){
-monthlySalary=_monthlySalary;
-}
-Administrative::Administrative(string _firstName, string _lastName, int _documentld, double _monthlySalary)
- {
+Administrative::Administrative() {}
 
+Administrative::Administrative(double monthlySalary) : monthlySalary(monthlySalary) {}
+
+Administrative::Administrative(const string &firstName, const string &lastName, int documentld, double monthlySalary)
+        : Person(firstName, lastName, documentld), monthlySalary(monthlySalary) {}
+
+double Administrative::getMonthlySalary() const {
+    return monthlySalary;
 }
-double Administrative::getMonthlySalary(){
-  return monthlySalary; 
+
+void Administrative::setMonthlySalary(double monthlySalary) {
+    Administrative::monthlySalary = monthlySalary;
 }
-void Administrative::setMonthlySalary(double _monthlySalary){
-  monthlySalary = _monthlySalary;
-}
+
 double Administrative::salary(){
  return 0.0;
 }
@@ -30,3 +29,7 @@ Person::toString();
 s<<"Salario: "<< monthlySalary<<endl;
 return s.str();
 }
+
+
+
+

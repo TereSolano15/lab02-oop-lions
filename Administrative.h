@@ -10,12 +10,15 @@ class Administrative: public Person {
 private:
   double monthlySalary;
 public:
-  Administrative();
-  Administrative(double _monthlySalary);
-  Administrative(string _firstName, string _lastName, int _documentld, double _monthlySalary);
-  double getMonthlySalary();
-  void setMonthlySalary(double _monthlySalary);
-  double salary();
+    Administrative();
+    Administrative(double monthlySalary);
+    Administrative(const string &firstName, const string &lastName, int documentld, double monthlySalary);
+
+    double getMonthlySalary() const;
+
+    void setMonthlySalary(double monthlySalary);
+
+    double salary();
   string toString();
 };
 

@@ -22,7 +22,7 @@ void Administrative::setMonthlySalary(double _monthlySalary){
   monthlySalary = _monthlySalary;
 }
 double Administrative::salary(){
-
+ return 0.0;
 }
 string Administrative::toString(){
 stringstream s;

@@ -1,7 +1,7 @@
-//
+
 // Created by Maikol Guzman on 8/2/20.
-//
-/*#include <iomanip>
+
+#include <iomanip>
 #include <stdexcept>
 #include <sstream>
 #include "Professor.h"
@@ -15,11 +15,16 @@ Professor::Professor(){
 
 }
 
-Professor::Professor(string firstName, string lastName, int documentId, double monthlySalary, double commissionRate) : Person(firstName, lastName, documentId)
-{
+Professor::Professor(double monthlySalary, double commissionRate){
 
   this->monthlySalary = monthlySalary;
   this->commissionRate = commissionRate;
+
+}
+
+Professor::Professor(string _firstName, string _lastName , int _documentld, double monthlySalary, double commissionRate){
+
+  
 
 }
 
@@ -52,7 +57,10 @@ void Professor::setCommissionRate(double commissionRate){
 //methods
 
 double Professor::salary(){
-
+  double sum;
+  double aux = (monthlySalary*commissionRate)/100;
+  sum = monthlySalary + aux;
+return sum; 
 }
 
 string Professor::toString(){
@@ -60,15 +68,15 @@ string Professor::toString(){
   stringstream s;
 
   s<< "\t" << Person::toString();
-  s<<" \t monthly Salary: " << this->monthlySalary << endl;
-  s<<" \t commission Rate: "<< this->commissionRate << endl;
+  s<<" \t monthly Salary: " << monthlySalary << endl;
+  s<<" \t commission Rate: "<< commissionRate << endl;
   s<<" \t new salary whith commission rate: " << salary();
 
   return s.str();
 }
 
 
-*/
+
 
 
 

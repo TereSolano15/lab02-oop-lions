@@ -2,7 +2,7 @@
 // Created by Maikol Guzman on 8/2/20.
 //
 
-/*#ifndef LAB02_OOP_PROFESSOR_H
+#ifndef LAB02_OOP_PROFESSOR_H
 #define LAB02_OOP_PROFESSOR_H
 #include "Person.h"
 
@@ -16,12 +16,13 @@ class Professor: public Person {
   public:
 
   Professor();
-  Professor(string,string,int,double,double): Person(firstName,lastName,documentId);
+  Professor(double monthlySalary, double commissionRate);
+  Professor(string _firstName, string _lastName, int _documentld, double monthlySalary, double commissionRate);
   virtual ~Professor();
   double getMonthlySalary();
-  void setMonthlySalary(double);
+  void setMonthlySalary(double monthlySalary);
   double getCommissionRate();
-  void setCommissionRate(double);
+  void setCommissionRate(double commissionRate);
   double salary();
   string toString();
   
@@ -30,4 +31,3 @@ class Professor: public Person {
 };
 
 #endif //LAB02_OOP_PROFESSOR_H
-*/

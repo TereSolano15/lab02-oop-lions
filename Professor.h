@@ -14,17 +14,20 @@ class Professor: public Person {
   double commissionRate;
 
   public:
+    Professor();
+    Professor(double monthlySalary, double commissionRate);
+    Professor(const string &firstName, const string &lastName, int documentld, double monthlySalary, double commissionRate);
 
-  Professor();
-  Professor(double monthlySalary, double commissionRate);
-  Professor(string _firstName, string _lastName, int _documentld, double monthlySalary, double commissionRate);
-  virtual ~Professor();
-  double getMonthlySalary();
-  void setMonthlySalary(double monthlySalary);
-  double getCommissionRate();
-  void setCommissionRate(double commissionRate);
-  double salary();
-  string toString();
+    double getMonthlySalary() const;
+
+    void setMonthlySalary(double monthlySalary);
+
+    double getCommissionRate() const;
+
+    void setCommissionRate(double commissionRate);
+
+    double salary();
+    string toString();
   
 
 

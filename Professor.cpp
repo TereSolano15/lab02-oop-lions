@@ -7,73 +7,53 @@
 #include "Professor.h"
 
 //constructors
+Professor::Professor(const string &firstName, const string &lastName, int documentld, double monthlySalary,
+                     double commissionRate) : Person(firstName, lastName, documentld), monthlySalary(monthlySalary),
+                                              commissionRate(commissionRate) {}
 
-Professor::Professor(){
+Professor::Professor() {}
 
-  this->monthlySalary = 0.0;
-  this->commissionRate = 0.0;
-
-}
-
-Professor::Professor(double monthlySalary, double commissionRate){
-
-  this->monthlySalary = monthlySalary;
-  this->commissionRate = commissionRate;
-
-}
-
-Professor::Professor(string _firstName, string _lastName , int _documentld, double monthlySalary, double commissionRate){
-
-  
-
-}
-
-//sets and gets
-
-double Professor:: getMonthlySalary(){
-
-  return monthlySalary;
-
-}
-
-void Professor::setMonthlySalary(double monthlySalary){
-
-  this->monthlySalary = monthlySalary;
-
-}
-
-double Professor::getCommissionRate(){
-
-  return commissionRate;
-
-}
-
-void Professor::setCommissionRate(double commissionRate){
-
-  this->commissionRate = commissionRate;
-
-}
+Professor::Professor(double monthlySalary, double commissionRate) : monthlySalary(monthlySalary),
+                                                                    commissionRate(commissionRate) {}
 
 //methods
 
+double Professor::getMonthlySalary() const {
+    return monthlySalary;
+}
+
+void Professor::setMonthlySalary(double monthlySalary) {
+    Professor::monthlySalary = monthlySalary;
+}
+
+double Professor::getCommissionRate() const {
+    return commissionRate;
+}
+
+void Professor::setCommissionRate(double commissionRate) {
+    Professor::commissionRate = commissionRate;
+}
+
 double Professor::salary(){
-  double sum;
-  double aux = (monthlySalary*commissionRate)/100;
-  sum = monthlySalary + aux;
-return sum; 
+    double sum;
+    double aux = (monthlySalary*commissionRate)/100;
+    sum = monthlySalary + aux;
+    return sum;
 }
 
 string Professor::toString(){
 
-  stringstream s;
+    stringstream s;
 
-  s<< "\t" << Person::toString();
-  s<<" \t monthly Salary: " << monthlySalary << endl;
-  s<<" \t commission Rate: "<< commissionRate << endl;
-  s<<" \t new salary whith commission rate: " << salary();
+    s<< "\t" << Person::toString();
+    s<<" \t monthly Salary: " << monthlySalary << endl;
+    s<<" \t commission Rate: "<< commissionRate << endl;
+    s<<" \t new salary whith commission rate: " << salary();
 
-  return s.str();
+    return s.str();
 }
+
+
 
 
 

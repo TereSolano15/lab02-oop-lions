@@ -10,7 +10,12 @@
 #include "Administrative.h"
 
 class University {
-
+private:
+    string name;
+    Professor* professor;
+    Administrative* administrative;
+    
+public:
 };
 
 

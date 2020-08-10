@@ -46,7 +46,7 @@ const vector<Professor> &University::getProfessorList() const {
     return professorList;
 }
 
-void University::setProfessorList(const vector<Professor> &professorList) {
+void University::addProfessor(const vector<Professor> &professorList) {
     University::professorList = professorList;
 }
 
@@ -54,6 +54,6 @@ const vector<Administrative> &University::getAdministrativeList() const {
     return administrativeList;
 }
 
-void University::setAdministrativeList(const vector<Administrative> &administrativeList) {
+void University::addAdministrative(const vector<Administrative> &administrativeList) {
     University::administrativeList = administrativeList;
 }

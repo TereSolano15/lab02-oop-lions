@@ -26,9 +26,10 @@ public:
     Administrative *getAdministrative() const;
     void setAdministrative(Administrative *administrative);
     const vector<Professor> &getProfessorList() const;
-    void setProfessorList(const vector<Professor> &professorList);
+    void addProfessor(const vector<Professor> &professorList);
     const vector<Administrative> &getAdministrativeList() const;
-    void setAdministrativeList(const vector<Administrative> &administrativeList);
+    void addAdministrative(const vector<Administrative> &administrativeList);
+
 
 };
 

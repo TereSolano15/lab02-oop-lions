@@ -17,8 +17,8 @@ Person* a1 = new Administrative("Marta","Rojas", 272923934, 800000.00);
 
 Person* a2 = new Administrative("Andrea","Jaramillo", 272923933, 500000.00);
 
-
-
+cout <<endl;
+cout<<"         General information         "<<endl<<endl;
 cout<<p1->toString()<<endl;
 cout<<p2->toString()<<endl;
 cout<<a1->toString()<<endl;

@@ -47,7 +47,7 @@ string Professor::toString(){
 
     s<< Person::toString();
     s<< "monthly Salary: " << monthlySalary << endl;
-    s<< "\t commission Rate: "<< commissionRate << endl;
+    s<< "\t commission Rate: "<< commissionRate*100<< "%" << endl;
     s<< "\t new salary whith commission rate: " << salary()<<endl;
 
     return s.str();

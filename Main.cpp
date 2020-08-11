@@ -9,9 +9,9 @@
 
 int main() {
 
-Person* p1 = new Professor("Mike", "Guzman", 123456789, 2000000.00, 0.5);
+Person* p1 = new Professor("Mike", "Guzman", 123456789, 2000000.00, 0.05);
 
-Person* p2 = new Professor("Pedro", "Sanchez", 1286608618, 1050000, 0.5);
+Person* p2 = new Professor("Pedro", "Sanchez", 1286608618, 1050000, 0.05);
 
 Person* a1 = new Administrative("Marta","Rojas", 272923934, 800000.00);
 

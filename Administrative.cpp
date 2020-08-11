@@ -26,7 +26,7 @@ double Administrative::salary(){
 string Administrative::toString(){
   stringstream s;
   s<<Person::toString();
-  s<<"\t Salary: "<< monthlySalary<<endl;
+  s<<" Salary: "<< monthlySalary<<endl;
   return s.str();
 }
 

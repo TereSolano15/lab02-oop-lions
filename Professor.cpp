@@ -45,10 +45,10 @@ string Professor::toString(){
 
     stringstream s;
 
-    s<< "\t" << Person::toString();
-    s<<" \t monthly Salary: " << monthlySalary << endl;
-    s<<" \t commission Rate: "<< commissionRate << endl;
-    s<<" \t new salary whith commission rate: " << salary();
+    s<< Person::toString();
+    s<< "\t monthly Salary: " << monthlySalary << endl;
+    s<< "\t commission Rate: "<< commissionRate << endl;
+    s<< "\t new salary whith commission rate: " << salary()<<endl;
 
     return s.str();
 }

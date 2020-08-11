@@ -24,10 +24,10 @@ double Administrative::salary(){
  return monthlySalary;
 }
 string Administrative::toString(){
-stringstream s;
-Person::toString();
-s<<" Salario: "<< monthlySalary<<endl;
-return s.str();
+  stringstream s;
+  s<<Person::toString();
+  s<<"\t Salary: "<< monthlySalary<<endl;
+  return s.str();
 }
 
 

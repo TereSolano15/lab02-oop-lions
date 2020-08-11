@@ -15,7 +15,7 @@ private:
 
 public:
     University(const string &name, Professor *professor, Administrative *administrative,
-            const vector<Professor> &professorList, const vector<Administrative> &administrativeList);
+    const vector<Professor> &professorList, const vector<Administrative> &administrativeList);
     University(const string &name);
     University();
     virtual ~University();
@@ -25,10 +25,10 @@ public:
     void setProfessor(Professor *professor);
     Administrative *getAdministrative() const;
     void setAdministrative(Administrative *administrative);
-    const vector<Professor> &getProfessorList() const;
-    void addProfessor(const vector<Professor> &professorList);
-    const vector<Administrative> &getAdministrativeList() const;
-    void addAdministrative(const vector<Administrative> &administrativeList);
+    const vector<Professor> getListProfessor();
+    void addProfessor(Professor);
+    const vector<Administrative> getListAdministrative();
+    void addAdministrative(Administrative);
 
 
 };

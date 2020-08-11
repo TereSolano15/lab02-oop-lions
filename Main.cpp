@@ -9,25 +9,29 @@
 
 int main() {
 
-Person* p1 = new Professor("Mike", "Guzman", 123456789, 2000000.00, 0.05);
+Professor p1("Mike", "Guzman", 123456789, 2000000.00, 0.05);
 
-Person* p2 = new Professor("Pedro", "Sanchez", 1286608618, 1050000, 0.05);
+Professor p2("Pedro", "Sanchez", 1286608618, 1050000, 0.05);
 
-Person* a1 = new Administrative("Marta","Rojas", 272923934, 800000.00);
+Administrative a1("Marta","Rojas", 272923934, 800000);
+Administrative a2("Andrea","Jaramillo", 272923933, 500000.00);
 
-Person* a2 = new Administrative("Andrea","Jaramillo", 272923933, 500000.00);
+University university("sipah");
+university.addProfessor(p1);
+university.addProfessor(p2);
+university.addAdministrative(a1);
+university.addAdministrative(a2);
 
-cout <<endl;
-cout<<"         General information         "<<endl<<endl;
-cout<<p1->toString()<<endl;
-cout<<p2->toString()<<endl;
-cout<<a1->toString()<<endl;
-cout<<a2->toString()<<endl;
+ vector<Professor> professorList = university.getListProfessor();
+    for (int i = 0; i < professorList.size(); i ++) {
+        cout << "Professor " << professorList[i].toString() << "\n";
+    }
+    cout << std::endl;
 
-delete p1;
-delete p2;
-delete a1;
-delete a2;
+    vector<Administrative> administrativeList = university.getListAdministrative();
+    for (int i = 0; i < administrativeList.size(); i ++) {
+        cout << "Administrative " << administrativeList[i].toString() << "\n";
+    }
 
 }
 

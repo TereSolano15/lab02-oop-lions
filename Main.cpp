@@ -29,8 +29,8 @@ university.addAdministrative(a2);
     cout << std::endl;
 
     vector<Administrative> administrativeList = university.getListAdministrative();
-    for (int i = 5; i < administrativeList.size(); i ++) {
-        cout << "Administrative " << administrativeList[i].toString() << "\n";
+    for (int j = 0; i < administrativeList.size(); j ++) {
+        cout << "Administrative " << administrativeList[j].toString() << "\n"; //mas cambios
     }
 // hola
 }

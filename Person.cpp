@@ -44,9 +44,8 @@ void Person::setDocumentld(int documentld) {
 
 string Person::toString() {
     stringstream s;
-    s << "\t The first name is: " << this->firstName << endl;
-    s << "\t The last name is: " << this->lastName << endl;
-    s << "\t The Doc ID is: " << this->documentld << endl;
+    s << "\t Professor information: " << this->firstName <<" "<<this->lastName<<endl;
+    s << "\t Doc ID:" << this->documentld <<" , ";
     return s.str();
 }
 
